@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+}
+
+.importante {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#contenedor-marcas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 200px;
+    img{
+        max-width: 300px;
+    }
+}
+
+#seccion-marcas{
+    background-image: url("img/image (8).png");
+    background-position: center;
+    background-size: cover;
+}
+
+#seccion-nosotros{
+    background-image: url("img/image (9).png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+        padding: 20px 50px;
+    div{
+        width: 50%;
+    }
+    img{
+        width: 80%;
+        box-shadow: 40px 40px #4e5c53;
+        border-radius: 3px;
+        margin-left: 20px;
+    }
+}
+
+#seccion-fundacion{
+    background-color: #91b7c2;
+}
+
+#seccion-contacto{
+    background-color: #28373c;
+    /* margin: 20px;
+    border: 3px solid red;
+    padding: 20px; */
+    #contacto-detalle:hover{
+        background-color: #304147;
+        transition: ease-in-out 100ms;
+    }
+}
+
+footer{
+    background-color: #2d373d;
+}
+
+.card{
+    width: 200px;
+    text-align: center;
+    background-color: #28373c;
+    margin: 20px;
+    padding: 20px;
+}
+
+.texto-invertido{
+    color: white;
+}
