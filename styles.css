@@ -7,6 +7,10 @@ header{
     justify-content: space-between;
     padding: 10px 40px;
     align-items: center;
+    position:absolute;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .importante {
@@ -14,44 +18,106 @@ header{
     text-decoration: underline;
 }
 
-#contenedor-marcas {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0 200px;
-    img{
-        max-width: 300px;
-    }
-}
-
 #seccion-marcas{
+    height: 100vh;
     background-image: url("img/image (8).png");
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+#contenedor-marcas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    img{
+        max-width: 100%;
+        margin: 0px 20px;
+        box-shadow: 5px 5px 10px 5px #0000001d;
+        border-radius: 3px;
+        border: 1px solid #0000001d;
+    }
 }
 
 #seccion-nosotros{
     background-image: url("img/image (9).png");
     background-position: center;
     background-size: cover;
-    display: flex;
-    align-items: center;
-        padding: 20px 50px;
-    div{
-        width: 50%;
+    
+    >.contenedor-chico{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 40px 0px;
+        >div{
+            flex: 1;
+            *{
+                margin: 10px 0px;
+            }
+        }
+        hr{
+            width: 20%;
+        }
     }
     img{
-        width: 80%;
+        width: 100%;
         box-shadow: 40px 40px #4e5c53;
         border-radius: 3px;
-        margin-left: 20px;
+        /* margin-left: 20px; */
     }
 }
 
 #seccion-fundacion{
     background-color: #91b7c2;
+    >img{
+        display: block;
+        margin:auto;
+        width: 300px;
+    }
+    .contenedor-chico{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .derecha{
+        /* backdrop-filter: blur(30%); */
+        background-image: filter(url("img/image (11).png"), brightness(50%));  /* Para usuarios de safari*/
+        background-image: url("img/image (11).png");
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 80px 20px;
+        /* gap: 40px; */
+        /* align-items: center; */
+    }
+    article{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+    #otras-noticias-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        color: rgb(220, 220, 220);
+        div{
+            margin-top: auto;
+            &.active{
+                color:white
+            }
+        }
+    }
 }
 
 #seccion-contacto{
@@ -59,10 +125,31 @@ header{
     /* margin: 20px;
     border: 3px solid red;
     padding: 20px; */
+    .contenedor-chico>div{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        >*{
+            flex: 1;
+        }
+    }
+    #mapa{
+        width: 100%;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     #contacto-detalle:hover{
         background-color: #304147;
         transition: ease-in-out 100ms;
     }
+}
+
+.contenedor-chico{
+    width: 800px;
+    margin:auto;
 }
 
 footer{
@@ -79,4 +166,10 @@ footer{
 
 .texto-invertido{
     color: white;
+}
+
+.boton{
+    background-color: #91b7c2;
+    border-radius: 3px;
+    border: none;
 }
